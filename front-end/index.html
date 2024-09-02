@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Gestión de Usuarios</title>
+</head>
+<body onload="listaUsuario()">
+    <div class="container">
+        <h1>Gestión de Usuarios</h1>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label for="SearchName">Filtrar por Nombre:</label>
+                    <input type="search" class="form-control" id="SearchName" placeholder="Ingrese el nombre">
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label for="SearchEmail">Filtrar por Correo Electrónico:</label>
+                    <input type="search" class="form-control" id="SearchEmail" placeholder="Ingrese el correo electrónico">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <a href="../front-end/html/crearUsuario.html"><button type="button" class="btn btn-success w-100">Añadir Usuario</button></a>
+            </div>
+            <div class="col-md-8 mb-3 text-md-end">
+                <button type="button" class="btn btn-primary me-2" onclick="listaUsuario()">Aplicar Filtros</button>
+                <button type="button" class="btn btn-secondary" onclick="limpiarFiltros()">Limpiar Filtros</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped table-hover">
+                    <thead> 
+                        <tr>
+                            <th>ID Usuario</th>
+                            <th>Tipo de Documento</th>
+                            <th>Número de Documento</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Correo Electrónico</th>
+                            <th>Fecha Última Actualización</th>
+                            <th>Fecha Último Inicio</th>
+                            <th>Contraseña</th>
+                            <th>Estado</th>
+                            <!-- <th>Acciones</th> -->
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla">
+                        <!-- Los datos de la tabla se llenarán aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./js/usuario.js"></script>
+</body>
+</html>

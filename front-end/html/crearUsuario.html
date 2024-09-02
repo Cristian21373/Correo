@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/crearRegistror.css">
+    <title>Registrar Usuario</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Registrar Usuario</h2>
+        <form id="formRegistroUsuario">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="tipo_Documento" class="form-label">Tipo de Documento</label>
+                        <select class="form-select" id="tipo_Documento" required>
+                            <option selected disabled>Seleccione el tipo de documento</option>
+                            <option value="cc">Cédula de Ciudadanía</option>
+                            <option value="ti">Tarjeta de Identidad</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="num_Documento" class="form-label">Número de Documento</label>
+                        <input type="number" class="form-control" id="num_Documento" placeholder="Ingrese el número de documento" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="fecha_nacimiento" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="correo_electronico" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo_electronico" placeholder="Ingrese el correo electrónico" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="contraseña" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contraseña" placeholder="Ingrese la contraseña" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="fecha_ultima_actua" class="form-label">Fecha Última Actualización</label>
+                        <input type="date" class="form-control" id="fecha_ultima_actua" required readonly>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="fecha_ultima_inicio" class="form-label">Fecha Último Inicio de Sesión</label>
+                        <input type="date" class="form-control" id="fecha_ultima_inicio" required readonly>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado</label>
+                        <select class="form-select" id="estado" required>
+                            <option selected disabled>Seleccione el estado</option>
+                            <option value="true">Activo</option>
+                            <option value="false">Inactivo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success">Registrar Usuario</button>
+                <button type="reset" class="btn btn-secondary">Limpiar</button>
+                <a href="../index.html" class="btn btn-danger">Volver</a>
+            </div>
+        </form>
+    </div>
+    <script src="../js/usuario.js"></script>
+</body>
+</html>
